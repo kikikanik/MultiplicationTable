@@ -29,7 +29,10 @@ public class multiplicationtableCode {
 			System.out.println(); 
 
 			for (int x = 1; x <= limit; x++) { 
-				System.out.print(x + "|");
+				System.out.printf("%10s", x + "|");
+				for (int n = 1; n<=10; n++) { 
+					System.out.printf("%10s",x*n); 
+				} 
 				for (int n = 1; n<=limit; n++) { 
 					System.out.printf("%10s",x*n); 
 				} 
@@ -42,12 +45,12 @@ public class multiplicationtableCode {
 	static double computeMath (double firstVar, double secondVar) {
 		Scanner in = new Scanner (System.in);
 		double answer = 0.0; 
-			System.out.print("Enter first Variable: ");
-			firstVar = in.nextDouble();
-			System.out.print("Enter second Variable: ");
-			secondVar = in.nextDouble();
-			answer = firstVar*secondVar;
+		System.out.print("Enter first Variable: ");
+		firstVar = in.nextDouble();
+		System.out.print("Enter second Variable: ");
+		secondVar = in.nextDouble();
+		answer = firstVar*secondVar;
 		in.close();
-		return answer;
+		return answer; 
 	}
 }
