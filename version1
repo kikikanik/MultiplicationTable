@@ -3,8 +3,8 @@ public class multiplicationtableCode {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner (System.in); 
-		System.out.print("How big do you want your multiplication table? Enter a rational number: "); 
-		double limit = in.nextDouble();
+		System.out.print("How big do you want your multiplication table? Enter an integer value: "); 
+		int limit = in.nextInt();
 		System.out.print("  ");
 		for (int n = 1; n<=limit; n++) { 
 			System.out.printf("%10d", n); 
