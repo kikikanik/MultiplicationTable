@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class multiplicationtableCode {
+
+	public static void main(String[] args) {
+		double firstVar= 0.0;
+		double secondVar= 0.0;
+		Scanner in = new Scanner (System.in); 
+		System.out.print("Would you like to print a full Multiplication (T)able or find the product of two (V)ariables?");
+		String choice= in.next();
+		if (choice.equals("V")) {
+			double variableAnswer = computeMath (firstVar, secondVar);
+			System.out.println(variableAnswer);
+		}
+		else {
+			System.out.print("How big do you want your multiplication table? Enter an integer value: "); 
+			int limit = in.nextInt();
+			System.out.print("  ");
+			for (int n = 1; n<=limit; n++) { 
+				System.out.printf("%10d", n); 
+			}
+			System.out.println();
+			for (int n =1; n<=limit; n++) {
+				System.out.print("___________");
+			}
+			System.out.println();
+			for (int n = 1; n<=limit; n++) { 
+				System.out.printf("%10s", " "); 
+			}
+			System.out.println(); 
+
+			for (int x = 1; x <= limit; x++) { 
+				System.out.print(x + "|");
+				for (int n = 1; n<=limit; n++) { 
+					System.out.printf("%10s",x*n); 
+				} 
+				System.out.println() ;
+			}
+			in.close(); 
+		}
+	}
+
+	static double computeMath (double firstVar, double secondVar) {
+		Scanner in = new Scanner (System.in);
+		double answer = 0.0; 
+			System.out.print("Enter first Variable: ");
+			firstVar = in.nextDouble();
+			System.out.print("Enter second Variable: ");
+			secondVar = in.nextDouble();
+			answer = firstVar*secondVar;
+		in.close();
+		return answer;
+	}
+}
